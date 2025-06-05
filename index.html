@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/png" href="assets/rcb-logo.png">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RCB - IPL 2025 Champions</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+</head>
+
+<script src="script.js"></script>
+<body>
+    <!-- Loader -->
+    <div id="loader">
+        <img src="assets/rcb-logo.png" alt="RCB Logo">
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">RCB</div>
+        <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#timeline">Journey</a></li>
+            <li><a href="#team">Winning Team</a></li>
+            <li><a href="#highlights">Highlights</a></li>
+            <li><a href="#photos">Photos</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <a href="#timeline" class="journey-button">Journey to Trophy</a>
+        </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section id="timeline">
+        <h2>RCB's Road to Glory</h2>
+        <div class="timeline">
+            <div class="timeline-item">🏏 Match 1 - vs MI - Win</div>
+            <div class="timeline-item">🔥 Match 2 - vs CSK - Win</div>
+            <div class="timeline-item">👑 Final - vs RR - CHAMPIONS!</div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team">
+        <h2>Winning Team</h2>
+        <div class="player-grid">
+            <div class="player-card">
+                <img src="assets/player1.jpg" alt="Player 1">
+                <h3>Virat Kohli</h3>
+                <p>Captain - Batsman</p>
+            </div>
+            <div class="player-card">
+                <img src="assets/player2.jpg" alt="Player 2">
+                <h3>Faf du Plessis</h3>
+                <p>Opener</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Highlights Section -->
+    <section id="highlights">
+        <h2>Match Highlights</h2>
+        <div class="video-wrapper">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" allowfullscreen></iframe>
+        </div>
+    </section>
+
+    <!-- Photos Carousel -->
+    <section id="photos">
+        <h2>Photo Highlights</h2>
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="assets/bg.jpg" alt="Photo 1"></div>
+                <div class="swiper-slide"><img src="assets/player1.jpg" alt="Photo 2"></div>
+                <div class="swiper-slide"><img src="assets/player2.jpg" alt="Photo 3"></div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        Made with ❤️ by RCB Fans | IPL 2025
+    </footer>
+
+     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
+<script>
+    // Loader functionality
+    window.addEventListener('load', () => {
+        const loader = document.getElementById('loader');
+        loader.style.display = 'none';
+    });
+
+    // Swiper initialization
+    const swiper = new Swiper('.swiper', {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+    });
+
+    // Navbar toggle function
+    function toggleMenu() {
+        const navLinks = document.getElementById('nav-links');
+        navLinks.classList.toggle('active');
+    }
+
