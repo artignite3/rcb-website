@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vote for Your RCB Stars</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="voting-container">
+        <h1>🗳️ Vote for Your RCB Heroes!</h1>
+
+        <!-- MVP Voting -->
+        <div class="vote-section">
+            <h2>🏆 Most Valuable Player</h2>
+            <button onclick="vote('kohli')">Virat Kohli</button>
+            <button onclick="vote('faf')">Faf du Plessis</button>
+            <button onclick="vote('maxwell')">Glenn Maxwell</button>
+        </div>
+
+        <canvas id="mvpChart" width="400" height="200"></canvas>
+    </div>
+
+    <script src="voting.js"></script>
+</body>
+</html>

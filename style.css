@@ -21,7 +21,7 @@ body {
     z-index: 999;
     display: flex;
     align-items: center;
-    transition: opacity 0.5s ease;
+     transition: opacity 0.5s ease;
     justify-content: center;
 }
 
@@ -83,11 +83,39 @@ body {
     background-position: center;
     background-attachment: fixed;
     height: 100vh;
+    position: relative;
+}
+
+/* Dark blurry overlay */
+.hero-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(4px);  /* 👈 this adds blur */
+    background-color: rgba(0, 0, 0, 0.6); /* 👈 this adds dark overlay */
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;
 }
+
+/* Hero Content */
+.hero-content .journey-button {
+    background-color: red;
+    color: white;
+    padding: 15px 30px;
+    font-size: 20px;
+    border: none;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    z-index: 1;
+}
+
+.hero-content .journey-button:hover {
+    background-color: gold;
+    color: black;
+}
+
 
 .hero-content .journey-button {
     background-color: red;
@@ -200,6 +228,29 @@ footer {
     background-color: #000;
     color: white;
 }
+.voting-container {
+    max-width: 600px;
+    margin: 50px auto;
+    text-align: center;
+    color: white;
+}
+
+.vote-section button {
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 16px;
+    border: none;
+    background-color: crimson;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.vote-section button:hover {
+    background-color: gold;
+    color: black;
+}
+
 
 /* Responsive */
 @media (max-width: 768px) {
