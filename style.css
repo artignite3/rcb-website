@@ -103,7 +103,7 @@ body {
     background-color: red;
     color: white;
     padding: 15px 30px;
-    font-size: 20px;
+    font-size: 10px;
     border: none;
     border-radius: 30px;
     text-decoration: none;
@@ -117,15 +117,11 @@ body {
 }
 
 
-.hero-content .journey-button {
-    background-color: red;
+.hero-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
     color: white;
-    padding: 15px 30px;
-    font-size: 20px;
-    border: none;
-    border-radius: 30px;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
 }
 
 .hero-content .journey-button:hover {
