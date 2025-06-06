@@ -1,26 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Vote for Your RCB Stars</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>RCB Vote Section</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-    <div class="voting-container">
-        <h1>🗳️ Vote for Your RCB Heroes!</h1>
+  <div class="voting-container" data-aos="fade-in">
+    <h1>🗳️ Vote for Your RCB Heroes!</h1>
 
-        <!-- MVP Voting -->
-        <div class="vote-section">
-            <h2>🏆 Most Valuable Player</h2>
-            <button onclick="vote('kohli')">Virat Kohli</button>
-            <button onclick="vote('faf')">Faf du Plessis</button>
-            <button onclick="vote('maxwell')">Glenn Maxwell</button>
-        </div>
-
-        <canvas id="mvpChart" width="400" height="200"></canvas>
+    <div class="vote-section">
+      <h2>MVP</h2>
+      <button onclick="vote('mvp','kohli')">Virat Kohli</button>
+      <button onclick="vote('mvp','pandya')">Krunal Pandya</button>
+      <button onclick="vote('mvp','hazelwood')">Josh Hazelwood</button>
+      <canvas id="mvpChart"></canvas>
     </div>
 
-    <script src="voting.js"></script>
+    <div class="vote-section">
+      <h2>Best Batter</h2>
+      <button onclick="vote('batter','kohli')">Virat Kohli</button>
+      <button onclick="vote('batter','patidar')">Rajat Patidar</button>
+      <button onclick="vote('batter','salt')">Phil Salt</button>
+      <canvas id="batterChart"></canvas>
+    </div>
+
+    <div class="vote-section">
+      <h2>Best Bowler</h2>
+      <button onclick="vote('bowler','hazelwood')">Josh Hazelwood</button>
+      <button onclick="vote('bowler','bhuvi')">Bhuvneshwar Kumar</button>
+      <button onclick="vote('bowler','pandya')">Krunal Pandya</button>
+      <canvas id="bowlerChart"></canvas>
+    </div>
+
+    <div class="vote-section">
+      <h2>Best Fielder</h2>
+      <button onclick="vote('fielder','salt')">Phil Salt</button>
+      <button onclick="vote('fielder','david')">Tim David</button>
+      <button onclick="vote('fielder','sheriff')">Romario Shephard</button>
+      <canvas id="fielderChart"></canvas>
+    </div>
+  </div>
+
+  <script src="voting.js"></script>
 </body>
 </html>

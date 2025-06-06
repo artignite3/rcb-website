@@ -91,7 +91,7 @@ body {
     position: absolute;
     width: 100%;
     height: 100%;
-    backdrop-filter: blur(4px);  /* 👈 this adds blur */
+    backdrop-filter: blur(2px);  /* 👈 this adds blur */
     background-color: rgba(0, 0, 0, 0.6); /* 👈 this adds dark overlay */
     display: flex;
     justify-content: center;
@@ -250,6 +250,61 @@ footer {
     background-color: gold;
     color: black;
 }
+
+
+/* Fireworks Animation */
+.fireworks {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.firework {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background-color: gold;
+    border-radius: 50%;
+    animation: fireworks 2s ease-in-out infinite;
+}
+
+.firework:nth-child(2) {
+    left: 30%;
+    animation-delay: 0.3s;
+}
+.firework:nth-child(3) {
+    left: 70%;
+    animation-delay: 0.6s;
+}
+
+.slogan {
+    font-size: 36px;
+    color: gold;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px red;
+}
+
+@keyframes fireworks {
+    0% {
+        top: 100%;
+        opacity: 1;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(2);
+    }
+    100% {
+        top: 0%;
+        opacity: 0;
+        transform: scale(0);
+    }
+}
+
 
 
 /* Responsive */
